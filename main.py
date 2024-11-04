@@ -14,7 +14,15 @@ def unlock_achievment(achievements, name, description):
     achievements.pop(name)
     achievements[name]={"unlocked", description}
     print(achievements)
-
-display_achievments(achievements)
-unlock_achievment(achievements,input(f"Want to open an achievement? Which one? Print IT! "), input("New description of this achievments(It can be he same): "))
-add_achievment(achievements, input("Name a new achievement: "), input("Description of this new achievments: "))
+choice=int(input("What do you want to do? 1-display achievments; 2-unlock achievments; 3-add achievment; 4-exit; "))
+gip = True
+while gip==True:
+    if choice ==1:
+        display_achievments(achievements)
+    elif choice == 2:
+        unlock_achievment(achievements,input(f"Want to open an achievement? Which one? Print IT! "), input("New description of this achievments(It can be he same): "))
+    elif choice == 3:
+        add_achievment(achievements, input("Name a new achievement: "), input("Description of this new achievments: "))
+    elif choice == 4:
+        gip=False
+        break
