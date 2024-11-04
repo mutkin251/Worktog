@@ -19,6 +19,7 @@ gip = True
 while gip==True:
     if choice ==1:
         display_achievments(achievements)
+        break
     elif choice == 2:
         unlock_achievment(achievements,input(f"Want to open an achievement? Which one? Print IT! "), input("New description of this achievments(It can be he same): "))
     elif choice == 3:
